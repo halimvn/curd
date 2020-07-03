@@ -33,4 +33,19 @@ class pertanyaanController extends Controller
             }
 
     }
+
+    public function edit($id){
+        $item = Pertanyaan::find_by_id($id);
+        return view('edit',compact('item'));
+    }
+
+    public function update($id, Request $request){
+        $item = Pertanyaan::update_data($id,$request->all());
+        return redirect('/pertanyaan');
+    }
+
+    public function destroy($id){
+        $item = Pertanyaan::destroy_data($id);
+        return redirect('/pertanyaan');
+    }
 }

@@ -18,7 +18,7 @@ class Jawaban extends Model
         $answers = DB::table('jawaban')
         ->join('pertanyaan','jawaban.idpertanyaan','=','pertanyaan.idpertanyaan')
         ->where('jawaban.idpertanyaan','=',$id)
-        ->select('pertanyaan.judul as judulpertanyaan','jawaban.*')
+        ->select('pertanyaan.judul as judulpertanyaan','pertanyaan.updated_at as update','pertanyaan.created_at as create','pertanyaan.isi as isipertanyaan','jawaban.*')
         
         ->get();
         return $answers;

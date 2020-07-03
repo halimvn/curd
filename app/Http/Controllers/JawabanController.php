@@ -16,6 +16,7 @@ class JawabanController extends Controller
 
     public function getindex($id){
         $answer = Jawaban::get_jawaban_id($id);
+       // dd($answer);
         return view('jawaban',compact('answer','id'));
     }
 

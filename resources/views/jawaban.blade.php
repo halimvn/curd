@@ -19,18 +19,27 @@
     <tr>
       
       <th>No</th>
-     
-      <th>Isi</th>
-      <th>Pertanyaan</th>
+     <th>Judul Pertanyaan</th>
+      <th>Isi Pertanyaan</th>
+
+      <th>Jawaban</th>
+      <th>Tanggal Update</th>
+      <th>Tanggal Dibuat</th>
     </tr>
   </thead>
   <tbody>
     @foreach ($answer as $item => $quest)
+    
       <tr>
         <td>{{$item + 1}}</td>
-        
+        <td>{{$quest->judulpertanyaan}}</td>
         <td>{{$quest->isi}}</td>
-      <td>{{$quest->judulpertanyaan}}</td>
+        <td>{{$quest->isipertanyaan}}</td>
+      <td>{{$quest->update}}</td>
+      <td>{{$quest->create}}</td>
+        
+       
+     
       </tr>    
     @endforeach
 

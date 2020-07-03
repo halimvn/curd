@@ -21,7 +21,8 @@
       <th>No</th>
       <th>Judul</th>
       <th>Isi</th>
-      <th>Jawaba</th>
+      <th colspan="3">Action</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -30,7 +31,13 @@
         <td>{{$item + 1}}</td>
         <td>{{$quest->judul}}</td>
         <td>{{$quest->isi}}</td>
-      <td><a href="/jawaban/{{$quest->idpertanyaan}}" class="btn btn-primary">Lihat Jawaban</a></td>
+      <td><a href="/pertanyaan/{{$quest->idpertanyaan}}" class="btn btn-primary">Lihat Jawaban</a>
+     <a href="/pertanyaan/{{$quest->idpertanyaan}}/edit" class="btn btn-success">Edit Soal</a>
+      <form style="display: inline;" action="pertanyaan/{{$quest->idpertanyaan}}/" method="POST">
+        @csrf
+        @method('DELETE')
+      <button type="submit" class="btn btn-danger">Delete</button></td>
+      </form>
       </tr>    
     @endforeach
   </tbody>

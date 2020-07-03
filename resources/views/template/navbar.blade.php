@@ -67,16 +67,7 @@
             </a>
            
           </li>
-          <li class="nav-item has-treeview">
-            <a href="/pertanyaan/create" class="nav-link">
-             
-              <p>
-               Buat Pertanyaan
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-           
-          </li>
+        
           <li class="nav-item">
             <a href="/jawaban" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
